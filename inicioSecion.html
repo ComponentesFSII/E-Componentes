@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="css/login.css">
+    <title>Inicio Secion</title>
+</head>
+<body>
+
+    <div style="text-align: center">
+        <img src="img/cambiarLogo.png" alt="logo" height="150px">
+        <h1 style="color: white">Nombre de la empresa</h1>
+    </div>
+
+    <main>
+        <div class="contenedor">
+
+            <div class="caja_trasera">
+                <div class="caja_trasera-login">
+                    <h3>¿Ya tienes cuenta?</h3>
+                    <p>Inicia secion para ingresar a la pagina</p>
+                    <button id="btn_iniciar-secion">Iniciar Secion</button>
+                </div>
+                <div class="caja_trasera-registro">
+                    <h3>¿Aun no tienes cuenta?</h3>
+                    <p>Registrate para iniciar secion</p>
+                    <button id="btn_registrarse">Registrarse</button>
+                </div>
+            </div>
+
+            <div class="contenedor_login-registro">
+                <!--formulario login-->
+                <form action="" class="formulario_login">
+                    <h2>Iniciar Secion</h2>
+                    <input type="text" maxlength="100" pattern=".+@(duoc\.cl|profesor\.duoc\.cl|gmail\.com)" placeholder="Correo Electronico">
+                    <input type="password" minlength="4" maxlength="10" placeholder="Contraseña">
+                    <button>Iniciar Secion</button>
+                </form>
+                <!--formulario de registro-->
+                <form action="" class="formulario_registro">
+                    <h2>Registrarse</h2>
+                    <input type="text" maxlength="100" placeholder="Nombre Completo">
+                    <input type="text" maxlength="100" pattern=".+@(duoc\.cl|profesor\.duoc\.cl|gmail\.com)" placeholder="Correo Electronico">
+                    <input type="password" minlength="4" maxlength="10" placeholder="Constraseña">
+                    <input type="password" minlength="4" maxlength="10" placeholder="Confirmar Constraseña">
+                    <input type="text" placeholder="Telefono">
+                    <!--selector de region y comuna-->
+                    <div class="region-comuna">
+                        <select name="Region" id="region">
+                            <option value="selecciona">Seleccione la Región</option>
+                            <option value="metropolitana">Región Metropolitana</option>
+                            <option value="aisen">Aisén</option>
+                            <option value="antofagasta">Antofagasta</option>
+                            <option value="araucanía">Araucanía</option>
+                            <option value="arica y parinacota">Arica y Parinacota</option>
+                            <option value="atacama">Atacama</option>
+                            <option value="biobio">Biobío</option>
+                            <option value="coquimbo">Coquimbo</option>
+                            <option value="libertador bernardo">Libertador General Bernardo O'Higgins</option>
+                            <option value="los lagos">Los Lagos</option>
+                            <option value="los rios">Los Ríos</option>
+                            <option value="magallanes">Magallanes</option>
+                            <option value="maule">Maule</option>
+                            <option value="ñuble">Ñuble</option>
+                            <option value="tarapaca">Tarapacá</option>
+                            <option value="valparaiso">Valparaíso</option>
+                        </select>
+                        <input type="text" placeholder="Comuna">
+                    </div>
+                    
+                    <button>Registrarse</button>
+                </form>
+            </div>
+
+        </div>
+    </main>
+    <script src="js/login.js"></script>
+</body>
+</html>
