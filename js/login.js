@@ -1,5 +1,5 @@
 document.getElementById("btn_registrarse").addEventListener("click",registro);
-document.getElementById("btn_iniciar-secion").addEventListener("click",iniciarSecion);
+document.getElementById("btn_iniciar-sesion").addEventListener("click",iniciarSesion);
 
 var formulario_login = document.querySelector(".formulario_login");
 var formulario_registro = document.querySelector(".formulario_registro");
@@ -7,7 +7,7 @@ var contenedor_login_registro = document.querySelector(".contenedor_login-regist
 var caja_trasera_login = document.querySelector(".caja_trasera-login")
 var caja_trasera_registro = document.querySelector(".caja_trasera-registro")
 
-function iniciarSecion(){
+function iniciarSesion(){
     formulario_registro.style.display = "none";
     contenedor_login_registro.style.left = "10px";
     formulario_login.style.display = "block";

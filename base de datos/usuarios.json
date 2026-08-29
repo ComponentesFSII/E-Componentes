@@ -1,0 +1,9 @@
+[
+{"type":"header","version":"5.2.1","comment":"Export to JSON plugin for PHPMyAdmin"},
+{"type":"database","name":"login_registro_bd"},
+{"type":"table","name":"usuarios","database":"login_registro_bd","data":
+[
+{"id":"5","nombre_completo":"maria","correo":"maria@duoc.cl","contrasena":"1234","telefono":"11111111","region":"metropolitana","comuna":"san joaquin"}
+]
+}
+]
