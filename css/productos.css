@@ -1,0 +1,139 @@
+.container{
+    max-width: 1500px;
+}
+
+.titulos{
+    background-color: white;
+    padding: 0.3%;
+    text-align: left;
+    font-weight: bold;
+    width:auto;
+    margin: 0;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border-radius: 2px;
+}
+
+.titulos_productos{
+    text-align: center;
+    font-weight: bold;
+    font-size: medium;
+}
+
+.img_producto_tamano{
+    height: 310px;
+    width: 100%;
+    object-fit: contain;
+}
+
+.card{
+    min-height: 15%;
+    min-width: 15%;
+}
+
+.imagen_vendidos{
+    height: 450px;
+    object-fit: contain;
+    width: 100%;
+}
+
+.carousel_posicion{
+    margin: auto;
+    margin-top: 15px;
+    background-color: white;
+    width: 80%;
+    margin-bottom: 120px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(40%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(90%) contrast(90%);
+}
+
+.cartel_mas_vendidos{
+    background-color: red;
+    font-size: 45px;
+    font-weight: bold;
+    color:white;
+    margin-bottom: 12px;
+    margin-top: 12px;
+    margin-left: 180px;
+    margin-right: 180px;
+}
+
+.cartel_exploracion{
+    background-color: darkblue;
+    font-size: 45px;
+    font-weight: bold;
+    color:white;
+    text-align: center;
+    margin-bottom: 12px;
+    margin-top: 12px;
+    margin-left: 180px;
+    margin-right: 180px;
+
+}
+
+.botones_ajustes{
+    width: 50%;
+    color: white;
+}
+
+footer{
+    width: 100%;
+    position: relative;
+    clear: both;
+    background-color: rgb(36, 36, 94);
+    color: white;
+    padding-bottom: 5%;
+}
+
+
+/*-----------------------------------------------------------*/
+
+.container_presentacion{
+    gap: 8%;
+    margin: 0;
+    display: flex;
+    margin-bottom: 8%;
+}
+
+.card_productos{
+    background-color: white;
+    border-radius: 20px;
+    height: 600px;
+    width: 850px;
+    padding: 4px;
+}
+
+.card_precios{
+    background-color: white;
+    border-radius: 20px;
+    margin-top: 80px;
+    height: 300px;
+    width: 425px;
+    padding: 4px;
+    color: red;
+    font-size: large;
+    font-weight: bold;
+}
+
+.card_productos_img{
+    height: 500px;
+    width: 100%;
+    object-fit: contain;
+}
+
+.accordion{
+    margin-bottom: 70px;
+    position: relative;
+    z-index: 2;
+    width: 50%;
+}
+
+.btn{
+    object-position: left;
+    color: white;
+}
+
+
