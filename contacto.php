@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    
+    <title>Contacto</title>
+</head>
+<body>
+    <div style="text-align: center">
+        <img src="img/cambiarLogo.png" alt="logo" height="150px">
+        <h1>Nombre de la empresa</h1>
+    </div>
+
+    <div class="container d-flex justify-content-center" style="text-align: center">
+        <form action="php/mensaje.php" method="POST" class="w-50">
+            <div class="mb-3">
+                <label for="correo" class="form-label">Correo</label>
+                <input type="text" class="form-control" maxlength="100" pattern=".+@(duoc\.cl|profesor\.duoc\.cl|gmail\.com)" placeholder="Correo Electronico" name="correo">
+            </div>
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre Completo</label>
+                <input type="text" class="form-control" maxlength="100" placeholder="Nombre Completo" name="nombre_completo">
+            </div>
+            <div class="mb-3">
+                <label for="comentario" class="form-label">Comentario</label>
+                <textarea class="form-control" 
+                    name="comentario"
+                    maxlength="500"
+                    rows="4"
+                    placeholder="Contenido"
+                    required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+        </form>
+    </div>
+
+    
+    <div class="modal fade" id="mensajeModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="tituloModal"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+            <div class="modal-body">
+                <p id="textoModal"></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Aceptar</button>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const parametros = new URLSearchParams(window.location.search);
+        const mensaje = parametros.get("mensaje");
+
+        if (mensaje === "exito") {
+
+            document.getElementById("tituloModal").textContent =
+                "Mensaje enviado";
+
+            document.getElementById("textoModal").textContent =
+                "Tu mensaje fue enviado correctamente.";
+
+            const modal = new bootstrap.Modal(
+                document.getElementById("mensajeModal")
+            );
+
+            modal.show();
+
+        }
+
+        else if (mensaje === "error") {
+
+            document.getElementById("tituloModal").textContent =
+                "Error";
+
+            document.getElementById("textoModal").textContent =
+                "No se pudo enviar el mensaje. Inténtalo nuevamente.";
+
+            const modal = new bootstrap.Modal(
+                document.getElementById("mensajeModal")
+            );
+
+            modal.show();
+
+        }
+    </script>
+</body>
+</html>
