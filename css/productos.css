@@ -29,6 +29,7 @@
 .card{
     min-height: 15%;
     min-width: 15%;
+    padding-bottom: 1px;
 }
 
 .imagen_vendidos{
@@ -51,7 +52,7 @@
 }
 
 .cartel_mas_vendidos{
-    background-color: red;
+    background-color: rgb(151, 42, 42);
     font-size: 45px;
     font-weight: bold;
     color:white;
@@ -62,7 +63,7 @@
 }
 
 .cartel_exploracion{
-    background-color: darkblue;
+    background-color: rgb(133, 133, 136);
     font-size: 45px;
     font-weight: bold;
     color:white;
@@ -109,13 +110,19 @@ footer{
 .card_precios{
     background-color: white;
     border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     margin-top: 80px;
     height: 300px;
     width: 425px;
     padding: 4px;
-    color: red;
     font-size: large;
     font-weight: bold;
+}
+
+.card_precios_detalles{
+    margin-left: 20px;
+    margin-top: 30px;
+    justify-content: space-between;
 }
 
 .card_productos_img{
@@ -131,9 +138,8 @@ footer{
     width: 50%;
 }
 
-.btn{
-    object-position: left;
+.btn-carrito{
+    margin-top: 50px;
+    margin-left: 110px;
     color: white;
 }
-
-

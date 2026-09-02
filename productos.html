@@ -7,6 +7,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="css/productos.css">
+    <script src="js/productos.js" defer></script>
     <title>Productos</title>
 </head>
 <body>
@@ -35,13 +36,19 @@
             
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="img/productos/monitor_image_lg_ultragear_27.avif" class="d-block imagen_vendidos" alt="...">
+                    <a href="detalleProductos.html?id=lgultragear">
+                        <img src="img/productos/monitor_image_lg_ultragear_27.avif" class="d-block imagen_vendidos" alt="...">
+                    </a>
                 </div>
                 <div class="carousel-item">
-                    <img src="img/productos/gpu_image_nvidia_rtx5060.png" class="d-block imagen_vendidos" alt="...">
+                    <a href="detalleProductos.html?id=rtx5060">
+                       <img src="img/productos/gpu_image_nvidia_rtx5060.png" class="d-block imagen_vendidos" alt="..."> 
+                    </a>
                 </div>
                 <div class="carousel-item">
-                    <img src="img/productos/cpu_image_intel_i5_9400f.webp" class="d-block imagen_vendidos" alt="...">
+                    <a href="detalleProductos.html?id=i59400f">
+                        <img src="img/productos/cpu_image_intel_i5_9400f.webp" class="d-block imagen_vendidos" alt="...">
+                    </a>
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
@@ -53,10 +60,13 @@
                 <span class="visually-hidden">Siguiente</span>
             </button>
         </div>
-        <div class="cartel_exploracion">
-            <span>Explora nuestros productos</span>
-        </div>
+        
     </div>
+
+    <div class="cartel_exploracion">
+        <span>Explora nuestros productos</span>
+    </div>
+
     <div class="container">
         <div class="titulos">
             <h4>Monitores</h4>
@@ -65,7 +75,9 @@
                 <div class="col">
                     <div class="card">
                         <h6 class="titulos_productos">Monitor Samsung Odyssey G3</h6>
-                        <img src="img/productos/monitor_image_samsung_odyssey_27.avif" class="card-img-top img_producto_tamano" alt="monitor_samsung">
+                        <a href="detalleProductos.html?id=odysseyG3">
+                            <img src="img/productos/monitor_image_samsung_odyssey_27.avif" class="card-img-top img_producto_tamano" alt="monitor_samsung">
+                        </a>
                         <div class="card-body">
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
                         </div>
@@ -79,7 +91,9 @@
                 <div class="col">
                 <div class="card">
                         <h6 class="titulos_productos">Monitor LG UltraGear</h6>
-                        <img src="img/productos/monitor_image_lg_ultragear_27.avif" class="card-img-top img_producto_tamano" alt="monitor_lg">
+                        <a href="detalleProductos.html?id=lgultragear">
+                            <img src="img/productos/monitor_image_lg_ultragear_27.avif" class="card-img-top img_producto_tamano" alt="monitor_lg">
+                        </a>
                         <div class="card-body">
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
                         </div>
@@ -92,7 +106,9 @@
                 <div class="col">
                 <div class="card">
                         <h6 class="titulos_productos">Monitor Acer</h6>
-                        <img src="img/productos/monitor_image_acer_curvo_31.webp" class="card-img-top img_producto_tamano" alt="monitor_acer">
+                        <a href="detalleProductos.html?id=acer180hz">
+                            <img src="img/productos/monitor_image_acer_curvo_31.webp" class="card-img-top img_producto_tamano" alt="monitor_acer">
+                        </a>
                         <div class="card-body">
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
                         </div>
@@ -113,7 +129,9 @@
                 <div class="col">
                     <div class="card">
                         <h6 class="titulos_productos">Nvidia Geforce RTX 4070</h6>
-                        <img src="img/productos/gpu_image_nvidia_rtx4070.webp" class="card-img-top img_producto_tamano" alt="monitor_samsung">
+                        <a href="detalleProductos.html?id=rtx4070">
+                            <img src="img/productos/gpu_image_nvidia_rtx4070.webp" class="card-img-top img_producto_tamano" alt="monitor_samsung">
+                        </a>
                         <div class="card-body">
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
                         </div>
@@ -126,7 +144,9 @@
                 <div class="col">
                 <div class="card">
                         <h6 class="titulos_productos">Nvidia Geforce RTX 5060ti</h6>
-                        <img src="img/productos/gpu_image_nvidia_rtx5060.png" class="card-img-top img_producto_tamano" alt="monitor_lg">
+                        <a href="detalleProductos.html?id=rtx5060ti">
+                            <img src="img/productos/gpu_image_nvidia_rtx5060.png" class="card-img-top img_producto_tamano" alt="monitor_lg">
+                        </a>
                         <div class="card-body">
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
                         </div>
@@ -139,7 +159,9 @@
                 <div class="col">
                 <div class="card">
                         <h6 class="titulos_productos">AMD Radeon 9060xt</h6>
-                        <img src="img/productos/gpu_image_amd_9060xt.webp" class="card-img-top img_producto_tamano" alt="monitor_acer">
+                        <a href="detalleProductos.html?id=9060xt">
+                            <img src="img/productos/gpu_image_amd_9060xt.webp" class="card-img-top img_producto_tamano" alt="monitor_acer">
+                        </a>
                         <div class="card-body">
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
                         </div>
@@ -159,7 +181,9 @@
                 <div class="col">
                     <div class="card">
                         <h6 class="titulos_productos">AMD Ryzen 7 </h6>
-                        <img src="img/productos/cpu_image_amd_ryzen7_5700x.jpg" class="card-img-top img_producto_tamano" alt="monitor_samsung">
+                        <a href="detalleProductos.html?id=ryzen7">
+                            <img src="img/productos/cpu_image_amd_ryzen7_5700x.jpg" class="card-img-top img_producto_tamano" alt="monitor_samsung">
+                        </a>
                         <div class="card-body">
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
                         </div>
@@ -172,7 +196,9 @@
                 <div class="col">
                 <div class="card">
                         <h6 class="titulos_productos">AMD Ryzen 9</h6>
-                        <img src="img/productos/cpu_image_amd_ryzen9_5950x.jpg" class="card-img-top img_producto_tamano" alt="monitor_lg">
+                        <a href="detalleProductos.html?id=ryzen9">
+                            <img src="img/productos/cpu_image_amd_ryzen9_5950x.jpg" class="card-img-top img_producto_tamano" alt="monitor_lg">
+                        </a>
                         <div class="card-body">
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
                         </div>
@@ -185,7 +211,9 @@
                 <div class="col">
                 <div class="card">
                         <h6 class="titulos_productos">Intel core I5-9400f</h6>
-                        <img src="img/productos/cpu_image_intel_i5_9400f.webp" class="card-img-top img_producto_tamano" alt="monitor_acer">
+                        <a href="detalleProductos.html?id=i59400f">
+                            <img src="img/productos/cpu_image_intel_i5_9400f.webp" class="card-img-top img_producto_tamano" alt="monitor_acer">
+                        </a>
                         <div class="card-body">
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
                         </div>

@@ -7,6 +7,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="css/productos.css">
+    <script src="js/productos.js" defer></script>
 
     <title>Producto</title>
 </head>
@@ -30,17 +31,20 @@
     
     <main class="container">
 
-        <div class="container_presentacion">
+        <div class="container_presentacion"> <!-- Apertura carta de presentación -->
             <div class="card_productos"> 
-                <h1>Nvidia Geforce RTX 5060ti</h1>
-                <img src="img/productos/gpu_image_nvidia_rtx5060.png" class="card_productos_img" alt="nvidia_rtx5060">
+                <h1></h1>
+                <img src="" class="card_productos_img" alt="producto-detalle">
             </div> 
             <div class="card_precios">
-                Precio:$429.990
-                <button type="button" class="btn btn-info btn-lg">Agregar al carrito</button>
+                <div class="card_precios_detalles">
+                    <p>Precio neto: $<span id="precioProducto"></span></p>
+                    <p>IVA (19%): $<span id="precioIVA"></span></p>
+                    <Strong><p>Precio TOTAL: $<span id="precioTotal"></span></p></Strong>
+                </div>
+                <button type="button" class="btn btn-info btn-lg btn-carrito">Agregar al carrito</button>
             </div>
-            
-        </div>
+        </div> <!-- Cierre carta de presentación -->
         
 
         <div class="accordion" id="accordionPanelsStayOpenExample"> <!-- Comienzo de acordeon -->
