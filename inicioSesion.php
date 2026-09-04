@@ -47,8 +47,10 @@
                 </form>
                 <!--formulario de registro-->
                 <form action="php/registro_usuario.php" method="POST" class="formulario_registro">
+                    <input type="hidden" name="origen" value="inicio">
                     <h2>Registrarse</h2>
                     <input type="text" maxlength="100" placeholder="Nombre Completo" name="nombre_completo">
+                    <input type="text" minlength="7" maxlength="9" pattern="\d{7,8}[0-9kK]"  placeholder="RUT 12345678K" name="rut">
                     <input type="text" maxlength="100" pattern=".+@(duoc\.cl|profesor\.duoc\.cl|gmail\.com)" placeholder="Correo Electronico" name="correo">
                     <input type="password" minlength="4" maxlength="10" placeholder="Contraseña" name="contrasena">
                     <input type="password" minlength="4" maxlength="10" placeholder="Confirmar Contraseña" name="contrasenaConf">
