@@ -1,3 +1,5 @@
+/*---------------------------------Ver lista de productos---------------------------------*/
+
 document.addEventListener('DOMContentLoaded', () => {
   const contenedorTabla = document.getElementById('table-products');
 
@@ -22,7 +24,76 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+/*---------------------------------Agregar nuevos productos---------------------------------*/
+
+
+let productos = [];
+
+async function cargarProductos() {
+  const productosRegistrados = localStorage.getItem('productos');
+
+  if(productosRegistrados){
+    productos = JSON.parse(productosRegistrados)
+  }else{
+    try {
+      const respuesta = await fetch('productos.json')
+      productos = await respuesta.json();
+    } catch (error) {
+      console.error('No se pudo cargar el archivo JSON')
+    }
+  }
+}
+
+function guardarEnMemoria(){
+  localStorage.setItem('productos', JSON.stringify(productos));
+}
+
+function registrarProductos(nuevoProducto){
+  const secuencia = productos.map(p => parseInt(p.id.replace('PR', ''), 10));
+  const numeroMayor = Math.max(...secuencia);
+  const nuevaSecuencia = numeroMayor + 1
+  const id = `PR${nuevaSecuencia.toString().padStart(3, '0')}`
+
+  const productoCargar = {
+    id: id,
+    titulo: nuevoProducto.titulo,
+    precio: Number(nuevoProducto.precio),
+    imagen: nuevoProducto.imagen || "img/productos"
+  }
+
+  productos.push(productoCargar)
+  guardarEnMemoria();
+
+  cargarProductos();
+}
+
+/*---------------------------------Agregar nuevos productos (Cuadro de dialogo)---------------------------------*/
+
+const botonAbrir = document.getElementById('ventana-ingreso-productos');
+const cuadro = document.getElementById('cuadro-ingreso-productos');
+const botonCerrar = document.getElementById('btn-cerrar-cuadro');
+const formulario = document.getElementById('forma-ingreso-productos');
+
+botonAbrir.addEventListener('click', () => {
+  cuadro.showModal();
+});
+
+botonCerrar.addEventListener('click', () => {
+  cuadro.close(); 
+  formulario.reset();
+});
+
+formulario.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  const nuevoProducto = {
+    titulo: document.getElementById('ingreso-nombre').value,
+    precio: document.getElementById('ingreso-precio').value,
+    imagen: document.getElementById('ingreso-imagen').value
+  };
+
+  registrarProductos(nuevoProducto);
+  formulario.reset();
+  cuadro.close();
   
-
-
-
+});
