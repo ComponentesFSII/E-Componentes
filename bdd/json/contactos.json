@@ -1,0 +1,9 @@
+[
+{"type":"header","version":"5.2.1","comment":"Export to JSON plugin for PHPMyAdmin"},
+{"type":"database","name":"login_registro_bd"},
+{"type":"table","name":"contactos","database":"login_registro_bd","data":
+[
+{"id":"1","nombre_completo":"maria","correo":"maria@duoc.cl","comentario":"mensaje de prueba"}
+]
+}
+]

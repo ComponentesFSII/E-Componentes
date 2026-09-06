@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    
+    <title>Usuarios</title>
+</head>
+<body>
+
+    <div class="container-fluid">
+        <div class="row" style="height: 150vh;">
+            <div class="col-2 col-sm-3 col-xl-2 bg-dark">
+                <!--menu lateral-->
+                <nav class="navbar bg-dark border-bottom border-body mb-3" data-bs-theme="dark">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#">Navbar</a>
+                    </div>
+                </nav>
+
+                <nav class="nav flex-column">
+                    <a class="nav-link active" href="#">Active</a>
+                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link" href="#">Link</a>
+                </nav>
+
+            </div>
+            <div class="col-10 col-sm-9 col-xl-10 p-0 m-0">
+                <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                    <div class="container-fluid">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <h3>Fronentes</h3>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <!--contenido de la pagina-->
+                <div class="container text-center">
+                    <h1>Tabla de Usuarios</h1>
+                    <table class="table table-bordered border-primary">
+                        <thead>
+                            <tr>
+                            <th scope="col">Run</th>
+                            <th scope="col">Nombre Completo</th>
+                            <th scope="col">Correo</th>
+                            <th scope="col">Telefono</th>
+                            <th scope="col">Region</th>
+                            <th scope="col">Comuna</th>
+                            <th scope="col"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                            <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                                <td>@mdo</td>
+                                <td>@mdo</td>
+                                <td>
+                                    <div class="d-grid gap-2 d-md-block">
+                                        <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#modalEditar">Editar</button>
+                                        <button class="btn btn-danger" type="button" data-bs-toggle="modal" data-bs-target="#modalEliminar">Eliminar</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                                <td>@fat</td>
+                                <td>@fat</td>
+                                <td>
+                                    <div class="d-grid gap-2 d-md-block">
+                                        <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#modalEditar">Editar</button>
+                                        <button class="btn btn-danger" type="button" data-bs-toggle="modal" data-bs-target="#modalEliminar">Eliminar</button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <!--boton de crear usuario-->
+                    <a class="btn btn-primary" href="registrarUserAdmi.html" role="button">Registrar Usuario</a>
+                 </div>
+            </div>
+        </div>
+
+        <!--modal eliminar usuario-->
+        <div class="modal fade" id="modalEliminar" tabindex="-1" aria-labelledby="modalEliminarLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Eliminar Usuario</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>El usuario será eliminado permanentemente.</p>
+                </div>
+                
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Guardar Cambios</button>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+                </div>
+            </div>
+        </div>
+        
+        <!--modal editar usuario-->
+        <div class="modal fade" id="modalEditar" tabindex="-1" aria-labelledby="modalEditarLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Editar Usuario</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!--formulario editar usuario-->
+                    <form>
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Nombre Completo</label>
+                            <input type="text" class="form-control" maxlength="100" placeholder="Nombre Completo" name="nombre_completo">
+                        </div>
+                        <div class="mb-3">
+                            <label for="correo" class="form-label">Correo</label>
+                            <input type="text" class="form-control" maxlength="100" pattern=".+@(duoc\.cl|profesor\.duoc\.cl|gmail\.com)" placeholder="Correo Electronico" name="correo">
+                        </div>
+                        <div class="mb-3">
+                            <label for="telefono" class="form-label">Telefono</label>
+                            <input type="text" class="form-control" placeholder="Telefono" name="telefono">
+                        </div>
+                        <div class="mb-3">
+                            <label for="region" class="form-label">Region</label>
+                            <input type="text" class="form-control" placeholder="Region" name="region">
+                        </div>
+                        <div class="mb-3">
+                            <label for="comuna" class="form-label">Comuna</label>
+                            <input type="text" class="form-control" placeholder="Comuna" name="comuna">
+                        </div>
+                        
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Guardar Cambios</button>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <div>
+            <p>Fronentes es una empresa ficticia enfocada en venta de hardware para PC</p>
+        </div>
+    </footer>
+    
+</body>
+</html>
