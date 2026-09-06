@@ -1,6 +1,6 @@
 <?php
 
-    include '../php/conexion.php';
+    include 'conexion.php';
     $id = $_GET['id'];
 
     $query = "DELETE FROM usuarios WHERE id='$id'";

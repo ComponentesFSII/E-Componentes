@@ -1,5 +1,5 @@
 <?php 
-    include '../php/conexion.php'; 
+    include 'conexion.php'; 
 
     $consulta = "SELECT * FROM usuarios"; 
     $resultado = mysqli_query($conexion, $consulta); 
@@ -95,10 +95,10 @@
                                     <td>
                                         <div class="d-grid gap-2 d-md-block">
                                             <a href="editarDatos.php?id=<?php echo $id;?>" class="btn btn-primary">Editar</a>
-                                            <button class="btn btn-danger" type="button" data-bs-toggle="modal" data-bs-target="#modalEliminar">Eliminar</button>
+                                            <button class="btn btn-danger" type="button" data-bs-toggle="modal" data-bs-target="#modalEliminar<?php echo $id;?>">Eliminar</button>
                                         </div>
                                         <!--modal eliminar usuario-->
-                                        <div class="modal fade" id="modalEliminar" tabindex="-1" aria-labelledby="modalEliminarLabel" aria-hidden="true">
+                                        <div class="modal fade" id="modalEliminar<?php echo $id;?>" tabindex="-1" aria-labelledby="modalEliminarLabel" aria-hidden="true">
                                             <div class="modal-dialog">
                                                 <div class="modal-content">
                                                 <div class="modal-header">

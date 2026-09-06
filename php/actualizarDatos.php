@@ -1,6 +1,6 @@
 <?php
 
-    include '../php/conexion.php';
+    include 'conexion.php';
     $id = $_POST['id'];
     $nombre_completo = $_POST['nombre_completo'];
     $rut = $_POST['rut'];

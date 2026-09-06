@@ -11,7 +11,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="../css/login.css">
     <title>Inicio Sesion</title>
 </head>
 <body>
@@ -39,14 +39,14 @@
 
             <div class="contenedor_login-registro">
                 <!--formulario login-->
-                <form action="php/login_usuario.php" method="POST" class="formulario_login">
+                <form action="login_usuario.php" method="POST" class="formulario_login">
                     <h2>Iniciar Sesion</h2>
                     <input type="text" maxlength="100" pattern=".+@(duoc\.cl|profesor\.duoc\.cl|gmail\.com)" placeholder="Correo Electronico" name="correo">
                     <input type="password" minlength="4" maxlength="10" placeholder="Contraseña" name="contrasena">
                     <button>Iniciar Sesion</button>
                 </form>
                 <!--formulario de registro-->
-                <form action="php/registro_usuario.php" method="POST" class="formulario_registro">
+                <form action="registro_usuario.php" method="POST" class="formulario_registro">
                     <input type="hidden" name="origen" value="inicio">
                     <h2>Registrarse</h2>
                     <input type="text" maxlength="100" placeholder="Nombre Completo" name="nombre_completo">
