@@ -1,83 +1,35 @@
-// Datos de productos
+document.addEventListener('DOMContentLoaded', () => {
+  const urlParams = new URLSearchParams(window.location.search);
+  const idProducto = urlParams.get('id');
 
-const productos = {
-    'rtx5060ti': {
-      titulo: 'Nvidia Geforce RTX 5060ti',
-      precio: 429990,
-      imagen: 'img/productos/gpu_image_nvidia_rtx5060.png'
-    },
-    'rtx4070': {
-      titulo: 'Nvidia Geforce RTX 4070',
-      precio: 390000,
-      imagen: 'img/productos/gpu_image_nvidia_rtx4070.webp'
-    },
-    '9060xt': {
-      titulo: 'AMD Radeon 9060xt',
-      precio: 400000,
-      imagen: 'img/productos/gpu_image_amd_9060xt.webp'
-    },
+  if (!idProducto) {
+    console.error('No se especificó un ID de producto en la URL');
+    return;
+  }
 
-    'odysseyG3': {
-      titulo: 'Monitor Samsung Odyssey G3',
-      precio: 189990,
-      imagen: 'img/productos/monitor_image_samsung_odyssey_27.avif'
-    },
+  fetch('../bdd/json/productos.json')
+    .then(response => {
+      return response.json();
+    })
+    .then(productos => {
+      const productoActual = productos.find(p => p.id === idProducto);
 
-    'lgultragear': {
-      titulo: 'Monitor LG UltraGear',
-      precio: 211990,
-      imagen: 'img/productos/monitor_image_lg_ultragear_27.avif'
-    },
+      const titulo = document.querySelector('.card_productos h1');
+      const imagen = document.querySelector('.card_productos_img');
+      if (titulo) titulo.innerText = productoActual.titulo;
+      if (imagen) imagen.src = productoActual.imagen;
 
-    'acer180hz': {
-      titulo: 'Monitor Acer',
-      precio: 189990,
-      imagen: 'img/productos/monitor_image_acer_curvo_31.webp'
-    },
+      // Calcular precios e IVA
+        const precioProducto = document.getElementById('precioProducto'); 
+        const precioIVA = document.getElementById('precioIVA');           
+        const precioTotal = document.getElementById('precioTotal');      
 
-    'ryzen7': {
-      titulo: 'AMD Ryzen 7',
-      precio: 319990,
-      imagen: 'img/productos/cpu_image_amd_ryzen7_5700x.jpg'
-    },
+        const total = Number(productoActual.precio);
+        const precioNeto = Math.round(total / 1.19);
+        const totalIVA = total - precioNeto;
 
-    'ryzen9': {
-      titulo: 'AMD Ryzen 9',
-      precio: 429990,
-      imagen: 'img/productos/cpu_image_amd_ryzen9_5950x.jpg'
-    },
-
-    'i59400f': {
-      titulo: 'Intel core I5-9400f',
-      precio: 239990,
-      imagen: 'img/productos/cpu_image_intel_i5_9400f.webp'
-    }
-  };
-
-  
-const urlParams = new URLSearchParams(window.location.search);
-const idProducto = urlParams.get('id');
-
-const productoActual = productos[idProducto] || productos['rtx5060ti'];
-
-
-document.querySelector('.card_productos h1').innerText = productoActual.titulo;
-document.querySelector('.card_productos_img').src = productoActual.imagen;
-
-var precioProducto = document.getElementById('precioProducto');
-precioProducto.innerText = productoActual.precio;
-
-//Calculo IVA y precios
-
-var precioProducto = document.getElementById('precioProducto');
-var precioIVA = document.getElementById('precioIVA');
-var precioTotal = document.getElementById('precioTotal');
-
-var precio = Number(precioProducto.innerText);
-
-var totalIVA = Math.round(precio * 0.19);
-var total = Math.round(precio * 1.19);
-
-precioProducto.innerText = precio.toLocaleString('es-CL');
-precioIVA.innerText = totalIVA.toLocaleString('es-CL');
-precioTotal.innerText = total.toLocaleString('es-CL');
+        if (precioProducto) precioProducto.innerText = precioNeto.toLocaleString('es-CL');
+        if (precioIVA) precioIVA.innerText = totalIVA.toLocaleString('es-CL');
+        if (precioTotal) precioTotal.innerText = total.toLocaleString('es-CL');
+    })
+});
