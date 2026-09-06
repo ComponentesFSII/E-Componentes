@@ -11,7 +11,7 @@
 </head>
 <body>
     <div style="text-align: center">
-        <img src="img/cambiarLogo.png" alt="logo" height="150px">
+        <img src="/img/Logo_de_empresa_2.png" alt="logo" height="150px">
         <h1>Nombre de la empresa</h1>
     </div>
 
