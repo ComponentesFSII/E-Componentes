@@ -1,4 +1,11 @@
 <?php 
+    session_start();
+
+    if(!isset($_SESSION['usuario']) || !isset($_SESSION['rol']) || $_SESSION['rol'] !== 'admin'){
+        header("location: inicioSesion.php");
+        exit;
+    }
+
     include 'conexion.php'; 
 
     $consulta = "SELECT * FROM usuarios"; 
@@ -14,6 +21,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     
+    
     <title>Usuarios</title>
 </head>
 <body>
@@ -24,16 +32,20 @@
                 <!--menu lateral-->
                 <nav class="navbar bg-dark border-bottom border-body mb-3" data-bs-theme="dark">
                     <div class="container-fluid">
-                        <a class="navbar-brand" href="#">Navbar</a>
+                        <a class="navbar-brand" href="#">
+                            <img src="../img/Logo_de_empresa_2.png" alt="Logo" width="150" height="90">
+                        </a>
+                        
                     </div>
                 </nav>
 
                 <nav class="nav flex-column">
-                    <a class="nav-link active" href="#">Active</a>
-                    <a class="nav-link" href="#">Link</a>
-                    <a class="nav-link" href="#">Link</a>
-                    <a class="nav-link" href="#">Link</a>
-                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link" href="#">Home</a>
+                    <a class="nav-link active" href="usuariosAdmi.php">Usuarios</a>
+                    <a class="nav-link" href="../html/productosAdmin.html">Productos</a>
+                    <a class="nav-link" href="../html/index.html">Pagina Tienda</a>
+                    <a class="nav-link"  href="cerrarSesion.php">Cierre Sesion</a>
+                    
                 </nav>
 
             </div>
@@ -95,10 +107,10 @@
                                     <td>
                                         <div class="d-grid gap-2 d-md-block">
                                             <a href="editarDatos.php?id=<?php echo $id;?>" class="btn btn-primary">Editar</a>
-                                            <button class="btn btn-danger" type="button" data-bs-toggle="modal" data-bs-target="#modalEliminar<?php echo $id;?>">Eliminar</button>
+                                            <button class="btn btn-danger" type="button" data-bs-toggle="modal" data-bs-target="#modalEliminar">Eliminar</button>
                                         </div>
                                         <!--modal eliminar usuario-->
-                                        <div class="modal fade" id="modalEliminar<?php echo $id;?>" tabindex="-1" aria-labelledby="modalEliminarLabel" aria-hidden="true">
+                                        <div class="modal fade" id="modalEliminar" tabindex="-1" aria-labelledby="modalEliminarLabel" aria-hidden="true">
                                             <div class="modal-dialog">
                                                 <div class="modal-content">
                                                 <div class="modal-header">
@@ -127,7 +139,7 @@
                     </table>
 
                     <!--boton de crear usuario-->
-                    <a class="btn btn-primary" href="registrarUserAdmi.php" role="button">Registrar Usuario</a>
+                    <a class="btn btn-primary" href="registrarUserAdmi.html" role="button">Registrar Usuario</a>
                  </div>
             </div>
         </div>

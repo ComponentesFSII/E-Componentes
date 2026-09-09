@@ -1,6 +1,7 @@
+<!--query para actualizar los datos del usuario de la vista administrador-->
 <?php
 
-    include 'conexion.php';
+    include '../php/conexion.php';
     $id = $_POST['id'];
     $nombre_completo = $_POST['nombre_completo'];
     $rut = $_POST['rut'];

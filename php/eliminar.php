@@ -1,6 +1,7 @@
+<!--elimina el usuario-->
 <?php
 
-    include 'conexion.php';
+    include '../php/conexion.php';
     $id = $_GET['id'];
 
     $query = "DELETE FROM usuarios WHERE id='$id'";

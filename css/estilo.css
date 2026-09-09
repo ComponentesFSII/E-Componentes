@@ -61,7 +61,6 @@ body {
             height: 140px;
             width: 100%;
             border-radius: 12px;  
-            object-fit: contain;
         }
         .hero-img-box {
             background-color: #ffffff;

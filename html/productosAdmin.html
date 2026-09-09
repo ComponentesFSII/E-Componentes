@@ -10,63 +10,96 @@
     <title>Productos - ADMI</title>
 </head>
 <body>
-    <nav class="navbar bg-dark border-bottom border-body mb-3" data-bs-theme="dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
-        </div>
-    </nav>
+    <div class="container-fluid">
+        <div class="row" style="height: 150vh;">
+            <div class="col-2 col-sm-3 col-xl-2 bg-dark">
+                <!--menu lateral-->
+                <nav class="navbar bg-dark border-bottom border-body mb-3" data-bs-theme="dark">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#">
+                            <img src="../img/Logo_de_empresa_2.png" alt="Logo" width="150" height="90">
+                        </a>
+                        
+                    </div>
+                </nav>
 
-    <table class="table">
-        <thead>
-            <tr>
-            <th scope="col">#</th>
-            <th scope="col">Producto</th>
-            <th scope="col">Precio</th>
-            <th scope="col">Imagen</th>
-            </tr>
-        </thead>
-        <tbody id="table-products">
-            <tr>
-            <th scope="row">1</th>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-            <th scope="row">2</th>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-            <th scope="row">3</th>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-        </tbody>
-    </table>
+                <nav class="nav flex-column">
+                    <a class="nav-link active" href="#">Home</a>
+                    <a class="nav-link" href="../php/usuariosAdmi.php">Usuarios</a>
+                    <a class="nav-link active" href="productosAdmin.html">Productos</a>
+                    <a class="nav-link" href="../html/index.html">Pagina Tienda</a>
+                    <a class="nav-link"  href="../php/cerrarSesion.php">Cierre Sesion</a>
+                </nav>
 
-    <button class="btn btn-success" id="ventana-ingreso-productos">Agregar producto</button>
-
-    <dialog id="cuadro-ingreso-productos">
-        <form class="cuadro-registro"  id="forma-ingreso-productos">
-            <h3>INGRESO DE PRODUCTOS</h3>
-            <label for="ingreso-nombre">Nombre: </label>
-            <input type="text" id="ingreso-nombre" required>
-            
-            <label for="ingreso-precio">Precio: </label>
-            <input type="number" id="ingreso-precio" required>
-            
-            <label for="ingreso-imagen">Imagen: </label>
-            <input type="text" id="ingreso-imagen" required>
-
-            <div style="margin-top: 50px;">
-                <button type="submit" class="btn btn-info">Agregar</button>
-                <button type="button" class="btn btn-danger" id="btn-cerrar-cuadro">Cancelar</button>
             </div>
-        </form>
-    </dialog>
+            <div class="col-10 col-sm-9 col-xl-10 p-0 m-0">
+                <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                    <div class="container-fluid">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <h3>Fronentes</h3>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <!--contenido de la pagina-->
+                <table class="table">
+                    <thead>
+                        <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Producto</th>
+                        <th scope="col">Precio</th>
+                        <th scope="col">Imagen</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-products">
+                        <tr>
+                        <th scope="row">1</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                        <th scope="row">2</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                        <th scope="row">3</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <button class="btn btn-success" id="ventana-ingreso-productos">Agregar producto</button>
+
+                <dialog id="cuadro-ingreso-productos">
+                    <form class="cuadro-registro"  id="forma-ingreso-productos">
+                        <h3>INGRESO DE PRODUCTOS</h3>
+                        <label for="ingreso-nombre">Nombre: </label>
+                        <input type="text" id="ingreso-nombre" required>
+                        
+                        <label for="ingreso-precio">Precio: </label>
+                        <input type="number" id="ingreso-precio" required>
+                        
+                        <label for="ingreso-imagen">Imagen: </label>
+                        <input type="text" id="ingreso-imagen" required>
+
+                        <div style="margin-top: 50px;">
+                            <button type="submit" class="btn btn-info">Agregar</button>
+                            <button type="button" class="btn btn-danger" id="btn-cerrar-cuadro">Cancelar</button>
+                        </div>
+                    </form>
+                </dialog>
+                
+            </div>
+        </div>
+
+    
 
     <footer>
         <div>

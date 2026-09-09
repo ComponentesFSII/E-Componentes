@@ -1,3 +1,6 @@
+<!--archivo de conexion a la base de datos-->
+
+
 <?php
     $conexion = mysqli_connect("localhost","root","","login_registro_bd");
     

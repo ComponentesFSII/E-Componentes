@@ -5,72 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/css/estilo.css">
-    <link rel="stylesheet" href="/css/blog.css">
+    <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="stylesheet" href="../css/blog.css">
     <title>BLOG</title>
 </head>
 <body>
-
-    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
-        <div class="container-fluid">
-            <a class="navbar-brand d-flex align-items-center gap-2" href="#">
-            <img src="/img/Logo_de_empresa_2.png" alt="Logo" width="90" height="55" class="d-inline-block align-middle">  
-            </a>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mx-auto mb-2 mb-lg-0 align-items-center">
-                <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/html/productos.html">Productos</a>
-                </li>
-        
-                <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="indexs.html">Registro</a>
-                </li>
-        
-                <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="Pagina1.html">Iniciar Sesion</a>
-                </li>
-        
-                <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/html/nosotros.html">Nosotros</a>
-                </li>
-        
-                <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/html/blog.html">Blogs</a>
-                </li>
-        
-                <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html">Contactos</a>
-                </li>
-        
-            </ul>
-            </div>
-            <a href="#" class="d-flex align-items-center gap-2 cart-link">
-            <i class="bi bi-cart-fill fs-5"></i>
-            <span>Carrito (0)</span>
-            </a>
-        </div>
-    </nav>
+<nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+  <div class="container-fluid">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+      <img src="../img/Logo_de_empresa_2.png" alt="Logo" width="90" height="55" class="d-inline-block align-middle">  
+    </a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0 align-items-center">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="productos.html">Productos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="nosotros.html">Nosotros</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="../php/inicioSesion.php">Iniciar Sesion</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="../php/cerrarSesion.php">Cierre Sesion</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="blog.html">Blogs</a>
+        </li>
+ 
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="contacto.html">Contactos</a>
+        </li>
+ 
+      </ul>
+    </div>
+    <a href="#" class="d-flex align-items-center gap-2 cart-link">
+      <i class="bi bi-cart-fill fs-5"></i>
+      <span>Carrito (0)</span>
+    </a>
+  </div>
+</nav>
 
     <div>
         <h1 class="titulo-cfg">Crisis de precios en tarjetas NVIDIA por escasez de componentes claves</h1>
         <div class="main-blog">
-            <a href="blog1.html">
-                <img src="../img/blogs/gpu_rota_blog.jpg" alt="caida_nvidia">
-            </a>
-            <div id="contenedor-blog-1" class="parrafo-cfg" ></div>
+            <img src="../img/blogs/gpu_rota_blog.jpg" alt="caida_nvidia">
+            <p class="parrafo-cfg">Esto es una prueba de parrafo</p>
         </div>    
     </div>
     
     <div>
         <h1 class="titulo-cfg">Intel vs AMD: La eterna discusión, ¿cuál elegir?</h1>
         <div class="main-blog">
-            <a href="blog2.html">
-                <img src="../img/blogs/cpu_discusion_blog.jpg" alt="intel_amd">
-            </a>
-            <div id="contenedor-blog-2" class="parrafo-cfg"></div>
+            <img src="../img/blogs/cpu_discusion_blog.jpg" alt="intel_amd">
+            <p class="parrafo-cfg">Esto es una prueba de parrafo</p>
         </div>
     </div>
         
-    <script src="../js/blog.js"></script>
 </body>
 </html>

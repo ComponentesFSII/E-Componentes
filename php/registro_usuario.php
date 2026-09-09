@@ -12,9 +12,10 @@
     $region = $_POST['region'];
 
     $origen = $_POST['origen'];
+    $rol = $_POST['rol'] ?? 'cliente';
 
-    $query = "INSERT INTO usuarios(nombre_completo,rut,correo,contrasena,telefono,region,comuna) 
-                VALUES('$nombre_completo','$rut','$correo','$contrasena','$telefono','$region','$comuna')";
+    $query = "INSERT INTO usuarios(nombre_completo,rut,correo,contrasena,telefono,region,comuna,rol) 
+                VALUES('$nombre_completo','$rut','$correo','$contrasena','$telefono','$region','$comuna','$rol')";
 
     //verificar que el correo no se repita en la base de datos
     $verificar_correo = mysqli_query($conexion, "SELECT * FROM usuarios WHERE correo='$correo' ");

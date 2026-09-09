@@ -1,10 +1,15 @@
 <?php
     session_start();
     if(isset($_SESSION['usuario'])){
-        header("location: ../html/index.html");
+        if(isset($_SESSION['rol']) && $_SESSION['rol'] === 'admin'){
+            header("location: usuariosAdmi.php");
+        }
+        else{
+            header("location: ../html/index.html");
+        }
+        exit;
     }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,7 +22,7 @@
 <body>
 
     <div style="text-align: center">
-        <img src="/img/Logo_de_empresa_2.png" alt="logo" height="150px">
+        <img src="../img/Logo_de_empresa_2.png" alt="logo" height="150px">
         <h1 style="color: white">Nombre de la empresa</h1>
     </div>
 

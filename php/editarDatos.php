@@ -1,3 +1,4 @@
+<!--ventana de editar usuario del boton que sale en usuariosAdmi-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,7 +45,7 @@
 
                 <!--contenido de la pagina-->
                 <?php
-                include("conexion.php");
+                include("../php/conexion.php");
 
                 if (!isset($_GET['id'])) {
                     header("Location: usuariosAdmi.php");
