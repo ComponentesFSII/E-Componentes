@@ -11,8 +11,9 @@
     $telefono = $_POST['telefono'];
     $comuna = $_POST['comuna'];
     $region = $_POST['region'];
+    $rol = $_POST['rol']; 
 
-    $query = "UPDATE usuarios SET nombre_completo='$nombre_completo',rut='$rut',correo='$correo',contrasena='$contrasena',telefono='$telefono',region='$region',comuna='$comuna' WHERE id='$id'";
+    $query = "UPDATE usuarios SET nombre_completo='$nombre_completo',rut='$rut',correo='$correo',contrasena='$contrasena',telefono='$telefono',region='$region',comuna='$comuna',rol='$rol' WHERE id='$id'";
 
     //verificar que el correo no se repita en la base de datos
     $verificar_correo = mysqli_query($conexion, "SELECT * FROM usuarios WHERE correo='$correo' AND id != '$id' ");

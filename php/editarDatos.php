@@ -9,6 +9,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     
     <link rel="stylesheet" href="../css/registroAdmin.css">
+    <link rel="stylesheet" href="../css/estilo.css">
 
     <title>Editar Usuario</title>
 </head>
@@ -19,25 +20,28 @@
                 <!--menu lateral-->
                 <nav class="navbar bg-dark border-bottom border-body mb-3" data-bs-theme="dark">
                     <div class="container-fluid">
-                        <a class="navbar-brand" href="#">Navbar</a>
+                        <a class="navbar-brand" href="#">
+                            <img src="../img/Logo_de_empresa_2.png" alt="Logo" width="150" height="90">
+                        </a>
+                        
                     </div>
                 </nav>
 
                 <nav class="nav flex-column">
-                    <a class="nav-link active" href="#">Active</a>
-                    <a class="nav-link" href="#">Link</a>
-                    <a class="nav-link" href="#">Link</a>
-                    <a class="nav-link" href="#">Link</a>
-                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link link-secondary text-decoration-none text-white" href="#">Home</a>
+                    <a class="nav-link active link-secondary text-decoration-none text-white" href="usuariosAdmi.php">Usuarios</a>
+                    <a class="nav-link link-secondary text-decoration-none text-white" href="../html/productosAdmin.html">Productos</a>
+                    <a class="nav-link link-secondary text-decoration-none text-white" href="../html/index.html">Pagina Tienda</a>
+                    <a class="nav-link link-secondary text-decoration-none text-white"  href="cerrarSesion.php">Cerrar Sesion</a>
                 </nav>
 
             </div>
             <div class="col-10 col-sm-9 col-xl-10 p-0 m-0">
-                <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
                     <div class="container-fluid">
                         <ul class="navbar-nav ms-auto">
                             <li class="nav-item">
-                                <h3>Fronentes</h3>
+                                <h3 style="color: #ffffff">Fronentes</h3>
                             </li>
                         </ul>
                     </div>
@@ -65,6 +69,7 @@
                     $telefono = $row['telefono'];
                     $comuna = $row['comuna'];
                     $region = $row['region'];
+                    $rol = $row['rol'];
                 }
                 ?>
                 <div class="container text-center">
@@ -73,7 +78,7 @@
                         <form action="actualizarDatos.php" method="POST" class="formulario_editar">
                             <input type="hidden" name="id" value="<?php echo $id;?>">
                             <input type="hidden" name="origen" value="administrador">
-                            <h2>Editar Usuario</h2>
+                            <h2 style="color: #ffffff">Editar Usuario</h2>
                             <div class="mb-3">
                                 <label for="nombre" class="form-label">Nombre Completo</label>
                                 <input type="text"  class="form-control" maxlength="100" placeholder="Nombre Completo" name="nombre_completo" value="<?php echo htmlspecialchars($nombre_completo); ?>">
@@ -89,6 +94,13 @@
                             <div class="mb-3">
                                 <label for="telefono" class="form-label">Telefono</label>
                                 <input type="text" class="form-control" placeholder="Telefono" name="telefono" value="<?php echo htmlspecialchars($telefono); ?>">
+                            </div>
+                             <div class="mb-3">
+                                <label for="rol" class="form-label">Rol</label>
+                                <select name="rol" id="rol" class="form-control">
+                                    <option value="cliente" <?php if($rol == "cliente") echo "selected"; ?>>Cliente</option>
+                                    <option value="admin" <?php if($rol == "admin") echo "selected"; ?>>Admin</option>
+                                </select>
                             </div>
                             <!--selector de region y comuna-->
                             <div class="region-comuna">
@@ -113,7 +125,7 @@
                                 </select>
                                 <input type="text" placeholder="Comuna" name="comuna" value="<?php echo htmlspecialchars($comuna); ?>">
                             </div>
-                            
+                           
                         <div class="d-grid gap-2 d-md-block" style="margin-top: 40px;">
                             <button type="submit" class="btn btn-primary">Actualizar</button>
                             <a href="usuariosAdmi.php" class="btn btn-danger">Cancelar</a>
@@ -126,9 +138,21 @@
     </div>
 
 
-    <footer>
-        <div>
-            <p>Fronentes es una empresa ficticia enfocada en venta de hardware para PC</p>
+    <footer class="mt-auto py-5 text-center"  style="background-color: #000000">
+        <div class="container">
+            <h4 class="mb-3" style="color: #ffffff">
+            <img src="../img/Logo_de_empresa_2.png" alt="Logo" width="90" height="55" class="d-inline-block align-middle">
+            Fronentes
+            </h4>
+            <ul class="list-inline mb-4">
+                <li class="list-inline-item mx-3"><a class="link-secondary text-decoration-none text-white" href="../html/index.html">Home</a></li>
+                <li class="list-inline-item mx-3"><a class="link-secondary text-decoration-none text-white" href="../html/productos.html">Productos</a></li>
+                <li class="list-inline-item mx-3"><a class="link-secondary text-decoration-none text-white" href="..html/nosotros.html">Nosotros</a></li>
+                <li class="list-inline-item mx-3"><a class="link-secondary text-decoration-none text-white" href="../html/blog.html">Blog</a></li>
+                <li class="list-inline-item mx-3"><a class="link-secondary text-decoration-none text-white" href="usuariosAdmi.php">Admi</a></li>
+                <li class="list-inline-item mx-3"><a class="link-secondary text-decoration-none text-white" href="..html/contacto.html">Contacto</a></li>
+            </ul>
+            <span class="small text-white">&copy; 2026 Fronentes</span>
         </div>
     </footer>
 </body>

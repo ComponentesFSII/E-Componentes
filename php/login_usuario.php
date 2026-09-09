@@ -22,4 +22,13 @@
         }
         exit;
     }
+    else {
+    echo '
+        <script>
+            alert("Usuario incorrecto");
+            window.location = "inicioSesion.php";
+        </script>
+    ';
+    exit;
+    }
 ?>

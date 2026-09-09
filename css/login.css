@@ -1,11 +1,8 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    font-family: sans-serif;
+.contenedor_logo {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 100px;
 }
-
 .region-comuna {
     display: flex;
     gap: 10px;
@@ -23,19 +20,13 @@
     width: 130%;
 }
 
-body{
-    background-image: url(../img/fondo.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-}
 
 main{
     width: 100%;
-    padding: 50px;
+    padding: 50px 50px 180px 50px;
     margin: auto;
     margin-top: 80px;
+    
 }
 
 .contenedor{
@@ -53,6 +44,7 @@ main{
     justify-content: center;
     backdrop-filter: blur(8px);
     background-color: rgba(0,128,255,0.5);
+    
 }
 
 .caja_trasera div{
@@ -95,7 +87,7 @@ main{
     width: 100%;
     max-width: 380px;
     position: relative;
-    top: -185px;
+    top: -195px;
     left: 10px;
     transition: left 500ms cubic-bezier(0.175,0.885,0.320,1.275);
 }
@@ -106,6 +98,7 @@ main{
     background: white;
     position: absolute;
     border-radius: 20px;
+    
 }
 
 .contenedor_login-registro form h2{
