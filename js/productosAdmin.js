@@ -10,7 +10,7 @@ async function cargarProductos() {
   } else {
     try {
 
-      const respuesta = await fetch('../bdd/productos.json');
+      const respuesta = await fetch('../bdd/json/productos.json');
       productos = await respuesta.json();
       guardarEnMemoria(); 
     } catch (error) {

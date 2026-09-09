@@ -25,7 +25,6 @@
                 </nav>
 
                 <nav class="nav flex-column">
-                    <a class="nav-link link-secondary text-decoration-none text-white" href="#">Home</a>
                     <a class="nav-link active link-secondary text-decoration-none text-white" href="../php/usuariosAdmi.php">Usuarios</a>
                     <a class="nav-link link-secondary text-decoration-none text-white" href="productosAdmin.html">Productos</a>
                     <a class="nav-link link-secondary text-decoration-none text-white" href="index.html">Pagina Tienda</a>
@@ -45,59 +44,57 @@
                 </nav>
 
                 <!--contenido de la pagina-->
-                <div class="container">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Producto</th>
-                            <th scope="col">Precio</th>
-                            <th scope="col">Imagen</th>
-                            </tr>
-                        </thead>
-                        <tbody id="table-products">
-                            <tr>
-                            <th scope="row">1</th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                            <th scope="row">2</th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                            <th scope="row">3</th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <table class="table">
+                <thead>
+                    <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Producto</th>
+                    <th scope="col">Precio</th>
+                    <th scope="col">Imagen</th>
+                    </tr>
+                </thead>
+                <tbody id="table-products">
+                    <tr>
+                    <th scope="row">1</th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                    <th scope="row">2</th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                    <th scope="row">3</th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
 
-                    <button class="btn btn-success" id="ventana-ingreso-productos">Agregar producto</button>
+            <button class="btn btn-success" id="ventana-ingreso-productos">Agregar producto</button>
 
-                    <dialog id="cuadro-ingreso-productos">
-                        <form class="cuadro-registro"  id="forma-ingreso-productos">
-                            <h3>INGRESO DE PRODUCTOS</h3>
-                            <label for="ingreso-nombre">Nombre: </label>
-                            <input type="text" id="ingreso-nombre" required>
-                            
-                            <label for="ingreso-precio">Precio: </label>
-                            <input type="number" id="ingreso-precio" required>
-                            
-                            <label for="ingreso-imagen">Imagen: </label>
-                            <input type="text" id="ingreso-imagen" required>
+            <dialog id="cuadro-ingreso-productos">
+                <form class="cuadro-registro"  id="forma-ingreso-productos">
+                    <h3>INGRESO DE PRODUCTOS</h3>
+                    <label for="ingreso-nombre">Nombre: </label>
+                    <input type="text" id="ingreso-nombre" required>
+                    
+                    <label for="ingreso-precio">Precio: </label>
+                    <input type="number" id="ingreso-precio" required>
+                    
+                    <label for="ingreso-imagen">Imagen: </label>
+                    <input type="text" id="ingreso-imagen" required>
 
-                            <div style="margin-top: 50px;">
-                                <button type="submit" class="btn btn-info">Agregar</button>
-                                <button type="button" class="btn btn-danger" id="btn-cerrar-cuadro">Cancelar</button>
-                            </div>
-                        </form>
-                    </dialog>
-                </div>
+                    <div style="margin-top: 50px;">
+                        <button type="submit" class="btn btn-info">Agregar</button>
+                        <button type="button" class="btn btn-danger" id="btn-cerrar-cuadro">Cancelar</button>
+                    </div>
+                </form>
+            </dialog>
             </div>
         </div>
 

@@ -49,7 +49,6 @@
                 </nav>
 
                 <nav class="nav flex-column">
-                    <a class="nav-link link-secondary text-decoration-none text-white" href="#">Home</a>
                     <a class="nav-link active link-secondary text-decoration-none text-white" href="usuariosAdmi.php">Usuarios</a>
                     <a class="nav-link link-secondary text-decoration-none text-white" href="../html/productosAdmin.html">Productos</a>
                     <a class="nav-link link-secondary text-decoration-none text-white" href="../html/index.html">Pagina Tienda</a>

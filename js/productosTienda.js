@@ -14,8 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
     .then(productos => {
       const productoActual = productos.find(p => p.id === idProducto);
 
-      const titulo = document.querySelector('.card_productos h1');
-      const imagen = document.querySelector('.card_productos_img');
+      const titulo = document.querySelector('.card-productos h1');
+      const imagen = document.querySelector('.card-productos-img');
       if (titulo) titulo.innerText = productoActual.titulo;
       if (imagen) imagen.src = productoActual.imagen;
 
