@@ -13,31 +13,55 @@
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Fronentes</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
+            <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+            <img src="/img/Logo_de_empresa_2.png" alt="Logo" width="90" height="55" class="d-inline-block align-middle">  
+            </a>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0 align-items-center">
                 <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link active" aria-current="page" href="/html/productos.html">Productos</a>
                 </li>
+        
+                <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="indexs.html">Registro</a>
+                </li>
+        
+                <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="Pagina1.html">Iniciar Sesion</a>
+                </li>
+        
+                <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/html/nosotros.html">Nosotros</a>
+                </li>
+        
+                <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/html/blog.html">Blogs</a>
+                </li>
+        
+                <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Contactos</a>
+                </li>
+        
             </ul>
             </div>
+            <a href="#" class="d-flex align-items-center gap-2 cart-link">
+            <i class="bi bi-cart-fill fs-5"></i>
+            <span>Carrito (0)</span>
+            </a>
         </div>
     </nav>
     
     <main class="container">
 
-        <div class="container_presentacion"> <!-- Apertura carta de presentación -->
-            <div class="card_productos"> 
+        <div class="container-presentacion"> <!-- Apertura carta de presentación -->
+            <div class="card-productos"> 
                 <h1></h1>
-                <img src="" class="card_productos_img" alt="producto-detalle">
+                <img src="" class="card-productos-img" alt="producto-detalle">
             </div> 
-            <div class="card_precios">
-                <div class="card_precios_detalles">
+            <div class="card-precios">
+                <div class="card-precios-detalles">
                     <p>Precio neto: $<span id="precioProducto"></span></p>
                     <p>IVA (19%): $<span id="precioIVA"></span></p>
                     <Strong><p>Precio TOTAL: $<span id="precioTotal"></span></p></Strong>

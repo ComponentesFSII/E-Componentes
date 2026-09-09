@@ -9,10 +9,14 @@
 
 .titulo-cfg{
     margin-left: 80px;
+    margin-bottom: 30px;
     color: white;
 }
 
 .parrafo-cfg{
     flex: 1;
     color: white;
+    margin-top: 200px;
+    margin-right: 40px;
+    line-height: 1.6; 
 }
