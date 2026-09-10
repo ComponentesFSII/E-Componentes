@@ -12,23 +12,24 @@
     $region = $_POST['region'];
 
     $origen = $_POST['origen'];
+    $rol = $_POST['rol'] ?? 'cliente';
 
-    $query = "INSERT INTO usuarios(nombre_completo,rut,correo,contrasena,telefono,region,comuna) 
-                VALUES('$nombre_completo','$rut','$correo','$contrasena','$telefono','$region','$comuna')";
+    $query = "INSERT INTO usuarios(nombre_completo,rut,correo,contrasena,telefono,region,comuna,rol) 
+                VALUES('$nombre_completo','$rut','$correo','$contrasena','$telefono','$region','$comuna','$rol')";
 
     //verificar que el correo no se repita en la base de datos
     $verificar_correo = mysqli_query($conexion, "SELECT * FROM usuarios WHERE correo='$correo' ");
     if(mysqli_num_rows($verificar_correo) > 0){
         if($origen == "administrador"){
-            $pagina = "../administrador/usuariosAdmi.php";
+            $pagina = "usuariosAdmi.php";
         }
         else{
-            $pagina = "../inicioSesion.php";
+            $pagina = "inicioSesion.php";
         }
         echo '
             <script>
                 alert("Este correo ya esta registrado");
-                window.location = "../inicioSesion.php";
+                window.location = "inicioSesion.php";
             </script>
         ';
         exit;
@@ -38,15 +39,15 @@
     $verificar_contrasena = ($contrasena == $contrasena_confimarcion);
     if(!$verificar_contrasena){
         if($origen == "administrador"){
-            $pagina = "../administrador/usuariosAdmi.php";
+            $pagina = "usuariosAdmi.php";
         }
         else{
-            $pagina = "../inicioSesion.php";
+            $pagina = "inicioSesion.php";
         }
          echo '
             <script>
                 alert("Contraseñas no coinciden");
-                window.location = "../inicioSesion.php";
+                window.location = "inicioSesion.php";
             </script>
         ';
         exit;
@@ -56,10 +57,10 @@
 
     if($ejecutar){
         if($origen == "administrador"){
-            $pagina = "../administrador/usuariosAdmi.php";
+            $pagina = "usuariosAdmi.php";
         }
         else{
-            $pagina = "../inicioSesion.php";
+            $pagina = "inicioSesion.php";
         }
         echo '
             <script> 

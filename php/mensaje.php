@@ -1,3 +1,4 @@
+<!--envia el mensaje en contacto-->
 <?php
     session_start();
     include 'conexion.php';
@@ -10,11 +11,11 @@
                 VALUES('$nombre_completo','$correo','$comentario')";
 
     if(mysqli_query($conexion,$query)){
-        header("location: ../contacto.php?mensaje=exito");
+        header("location: contacto.html?mensaje=exito");
         exit();
     }
     else {
-    header("Location: ../contacto.php?mensaje=error");
+    header("Location: contacto.html?mensaje=error");
     exit();
     }
     

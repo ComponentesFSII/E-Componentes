@@ -1,3 +1,4 @@
+<!--elimina el usuario-->
 <?php
 
     include '../php/conexion.php';
